@@ -1,0 +1,13 @@
+<h1>Dragon Info</h1>
+
+<ul class="list-group">
+  <li class="list-group-item">Name: <%= @dragon.name %></li>
+  <li class="list-group-item">Power Type: <%= @dragon.power_type %></li>
+  <li class="list-group-item">Dragon's Master: <%= link_to @dragon.user.name, users_path %></li>
+</ul>
+
+
+<h2 class="mt-3">Links</h2>
+<p><%= link_to "Dragon Index", dragons_path %></p>
+<p><%= link_to "Edit Dragon Info", edit_dragon_path %></p>
+<p><%= link_to 'Destroy', @dragon, method: :delete, data: { confirm: 'Are you sure?' } %></p>
